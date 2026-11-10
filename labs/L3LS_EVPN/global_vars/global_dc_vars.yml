@@ -104,3 +104,26 @@ l3_edge:
       nodes: [ s1-brdr2, s2-brdr2 ]
       interfaces: [ Ethernet5, Ethernet5 ]
       profile: S1_to_S2_profile
+  tenants:
+  - name: S2_FABRIC
+    mac_vrf_vni_base: 10000
+    vrfs:
+      - name: OVERLAY
+        vrf_vni: 10
+        svis:
+          - id: 10
+            name: 'Ten'
+            enabled: true
+            ip_address_virtual: 10.10.10.1/24
+          - id: 20
+            name: 'Twenty'
+            enabled: true
+            ip_address_virtual: 10.20.20.1/24
+          - id: 30
+            name: 'Thirty'
+            enabled: true
+            ip_address_virtual: 10.30.30.1/24
+          - id: 40
+            name: 'Forty'
+            enabled: true
+            ip_address_virtual: 10.40.40.1/24
